@@ -40,13 +40,11 @@ terraform apply \
 ```
 
 Terraform will:
-
-Create a private S3 bucket
-Request and validate an ACM certificate in us-east-1
-Deploy a CloudFront distribution
-Configure Route 53 DNS
-
-Wait for certificate validation (this may take a few minutes).
+* Create a private S3 bucket \
+* Request and validate an ACM certificate in us-east-1 \
+* Deploy a CloudFront distribution \
+* Configure Route 53 DNS \
+**Note:** Wait for certificate validation (this may take a few minutes).
 
 3. Upload Website Content
 After Terraform completes, upload your static files to S3 using the helper script:
@@ -68,9 +66,9 @@ Visit your custom domain `(e.g. https://example.com)`. It should serve content s
 
 After a successful terraform apply, note the following outputs:
 
-**s3_bucket_name**:	Name of your S3 bucket
-**cloudfront_domain_name**:	CloudFront distribution domain
-**website_url**: HTTPS URL of your site
+**s3_bucket_name**:	Name of your S3 bucket \
+**cloudfront_domain_name**:	CloudFront distribution domain \
+**website_url**: HTTPS URL of your site \
 **certificate_arn**: ARN of the ACM certificate
 
 # Best Practices
